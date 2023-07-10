@@ -1,13 +1,12 @@
 # Distribution
 ```bash
 # Package
-pip install setuptools
+pip3 install setuptools twine
 
 # Distribute
 # Instal to local system: $ pip install dist/cicv-0.0.1.tar.gz
-python setup.py sdist --no-compile bdist_wheel
+python3 setup.py sdist bdist_wheel
 
 # Update load to PyPI
-pip install twine
 twine upload dist/*
 ```
