@@ -353,7 +353,7 @@ def get_source_object(input:str, camera_resolution:Tuple[int, int]=(1280, 720), 
         errors: the latest exception
 
     Returns:
-        Wrapper: return a iVIT Source Wrapper
+        Wrapper: return a CICV Source Wrapper
     """
     errors = []
     for reader in (ImageWrapper, DirImageWrapper, VideoWrapper, RtspWrapper):
@@ -378,7 +378,7 @@ def get_source_object(input:str, camera_resolution:Tuple[int, int]=(1280, 720), 
 class Source(object):
 
     def __init__(self, input:str, resolution:Tuple[int, int]=None, fps:int=None) -> None:
-        """iVIT Source Object
+        """CICV Source Object
         
         Args:
             input (str): the input data, supported image path, image folder, 
@@ -397,7 +397,7 @@ class Source(object):
 
     def _print_info(self):
         print(
-            "[ iVIT Source Information ]\n",
+            "[ CICV Source Information ]\n",
             f"\t- Name      : {self.input}\n",
             f"\t- Type      : {self.src.get_type()}\n",
             f"\t- Shape     : {self.width}, {self.height} ( W, H )\n",
@@ -456,7 +456,7 @@ class Source(object):
 class SourceV2(object):
 
     def __init__(self, input:str, resolution:Tuple[int, int]=None, fps:int=None, start:bool=False) -> None:
-        """iVIT Source Object ( Async )
+        """CICV Source Object ( Async )
 
         Args:
             input (str): the input data, supported image path, image folder, video path, rtsp uri and usb camera.
@@ -496,7 +496,7 @@ class SourceV2(object):
 
     def _print_info(self):
         print(
-            "[ iVIT Source Information ]\n",
+            "[ CICV Source Information ]\n",
             f"\t- Name      : {self.input}\n",
             f"\t- Type      : {self.src.get_type()}\n",
             f"\t- Shape     : {self.width}, {self.height} ( W, H )\n",
@@ -681,7 +681,7 @@ class SourceV2(object):
         """ Get source status and current frame """
 
         if not self.is_ready:
-            raise RuntimeError('iVIT Source has not start yet.')
+            raise RuntimeError('CICV Source has not start yet.')
 
         # Check current frame and previous frame
         if self.pre_frame_id == self.cur_frame_id:    

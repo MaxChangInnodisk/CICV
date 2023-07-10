@@ -14,7 +14,7 @@ class FPS_HELPER():
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-n', '--name', default='ivit', help="The cv window name.")
+    parser.add_argument('-n', '--name', default='CICV', help="The cv window name.")
     parser.add_argument('-i', '--input', required=True, help="The input data.")
     parser.add_argument('-r', '--resolution', type=str, default=None, help="The resolution ( e.g. {w}x{h} ) you want to get from source object. only support V4L2 type")
     parser.add_argument('-f', '--fps', type=int, default=None, help="The fps you want.")
